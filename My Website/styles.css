@@ -1,0 +1,100 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-image: url("img/hero image.jpeg");
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: multiply;
+  background-size: cover;
+  background-position-x: 40%;
+  background-position-y: center;
+  background-attachment: fixed;
+  height: 100vh;
+}
+
+nav {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  opacity: 0;
+  background: rgba(0, 0, 0, 0.7);
+  animation: nav-fade-in 1s ease 1.5s forwards;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  padding-left: 0;
+}
+
+nav ul li {
+  padding-right: 5vw;
+  padding-left: 5vw;
+}
+
+nav ul li a {
+  color: white;
+  opacity: 0;
+  text-decoration: none;
+  animation: fade-in 1s ease 2s forwards;
+
+}
+
+.title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 4em;
+  opacity: 0;
+  animation: fade-in 1.5s ease 500ms forwards;
+}
+
+.sub-txt {
+  color: white;
+  font-size: 1em;
+  opacity: 0;
+  animation: fade-in 1.5s ease 1s forwards;
+}
+
+.title-placement {
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 90vh;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+
+@keyframes nav-fade-in {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
